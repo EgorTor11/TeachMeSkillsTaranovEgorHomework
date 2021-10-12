@@ -14,14 +14,21 @@ public class Main {
         Compukter ewmZabuldyga=new Compukter(false,true,false,2);
         System.out.println("для покупки введите номер понравившегося компа \n1-ноут DELL\n2-ноут ASSER\n3-эвм Красный собутыльник");
         Scanner scanner=new Scanner(System.in);
+        boolean bool=true;
+        while (bool){
         switch (scanner.nextInt()){
             case 1:Compukter.diagnos(compukterNoubukDel);
+            bool =false;
             break;
             case 2:Compukter.diagnos(compukterNoubukAsser);
+            bool =false;
             break;
             case 3:Compukter.diagnos(ewmZabuldyga);
+            bool =false;
             break;
-
+            default:
+                System.out.println("нужно выбрать 1 или 2 или 3");
+        }
         }
         Compukter.start();
     }

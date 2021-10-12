@@ -42,7 +42,7 @@ public class Compukter {
         if (compukter.isHardDrive()){
             hardDriveAvailability="еcть";
         }else hardDriveAvailability="нет";
-        System.out.println("Жесткий диск: "+hardDriveAvailability+
+        System.out.println("Технические параметры компа\nЖесткий диск: "+hardDriveAvailability+
                 "\nПроцессор: "+processorAvailability+
                 "\nОперативка: "+ramAvailability+
                 "\nРесурс включений: "+compukter.getResourceComp());
