@@ -86,6 +86,7 @@ public class Compukter {
               status= Utils.INVALID;
                System.out.println("Истек ресурс включений");
                turnOn();
+               break;
        }
            turnOn();
            if(status==Utils.ISON){
