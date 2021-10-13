@@ -7,7 +7,7 @@ public class Compukter {
 
   static   Scanner scanner=new Scanner(System.in);
     private static int status;
-    static  int resourceComp=0;
+    int resourceComp=0;
     boolean processor, ram,hardDrive;
     public Compukter(boolean processor, boolean ram, boolean harddrive,int resourceComp) {
         this.processor = processor;
@@ -53,13 +53,17 @@ public class Compukter {
         Scanner scanner=new Scanner(System.in);
         if (status==Utils.INVALID){
             scanner.nextInt();
-            System.out.println("Компьютер сгорел");}
+            System.out.println("Компьютер сгорел");
+            return;
+        }
         if (scanner.nextInt()==random.nextInt(2)){
             System.out.println("Ваш корч включился каким-то чудом (с заботой о клиентах :)");
             status=Utils.ISON;
         }else {
             System.out.println("вы сломали комп");
-            status=Utils.INVALID;}
+            status=Utils.INVALID;
+            turnOn();
+        }
     }
     public static void turnOf(){
 
@@ -73,11 +77,12 @@ public class Compukter {
         }else {
             System.out.println("вы сломали комп");
             status=Utils.INVALID;
+            turnOn();
         }
     }
-    public static void start(){
-       for (int i=0;i<=resourceComp;){
-           if (i==resourceComp){
+    public static void start(Compukter compukter){
+       for (int i=0;i<=compukter.getResourceComp();){
+           if (i==compukter.getResourceComp()){
               status= Utils.INVALID;
                System.out.println("Истек ресурс включений");
                turnOn();
