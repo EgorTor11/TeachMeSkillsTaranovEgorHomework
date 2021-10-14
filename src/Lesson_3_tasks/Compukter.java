@@ -1,11 +1,8 @@
 package Lesson_3_tasks;
-
 import java.util.Random;
 import java.util.Scanner;
-
 public class Compukter {
-
-  static   Scanner scanner=new Scanner(System.in);
+    static   Scanner scanner=new Scanner(System.in);
     private static int status;
     int resourceComp=0;
     boolean processor, ram,hardDrive;
@@ -15,11 +12,9 @@ public class Compukter {
         this.hardDrive = harddrive;
         this.resourceComp = resourceComp;
     }
-
     public int getResourceComp() {
         return resourceComp;
     }
-
     public boolean isProcessor() {
         return processor;
     }
@@ -66,11 +61,9 @@ public class Compukter {
         }
     }
     public static void turnOf(){
-
         System.out.println("для выключения вашего чуда техники нажмите 0 или 1");
         Random random=new Random();
         Scanner scanner=new Scanner(System.in);
-
         if (scanner.nextInt()==random.nextInt(2)){
             System.out.println("Ваш корч выключился, слава летающему дуршлаку" );
             status=Utils.ISOF;
@@ -97,7 +90,6 @@ public class Compukter {
            }
            if (status==Utils.ISOF){
                i++;
-
            }
        }
     }

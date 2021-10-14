@@ -1,7 +1,5 @@
 package Lesson_3_tasks;
-
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
       buyСomputer();
@@ -28,7 +26,6 @@ public class Main {
                 System.out.println("нужно выбрать 1 или 2 или 3");
         }
         }
-
     }
 
 }
