@@ -14,7 +14,7 @@ public class Main {
         System.out.println("введите выражение для расчета используя римские и/или арабские цифры");
         String userStr=new Scanner(System.in).nextLine()+"  ";
 
-        String str="";   //тоговая строка
+        String str="";   //итоговая строка
 
         char[] userCharArray=userStr.toCharArray();
         Map<String,Integer> hashMapRoma=new HashMap();
